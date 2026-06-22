@@ -8,7 +8,7 @@ reg clk,wr;         //wr = 1 implies writing onto memory
 wire [7:0]bus;
 
 reg [7:0]bus_tb;
-reg bus_drive;
+reg bus_drive;    //drives the tri-state bus
 
     assign bus = (bus_drive) ? bus_tb : 8'bz;
 
